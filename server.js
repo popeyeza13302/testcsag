@@ -27,7 +27,7 @@ app.post('/api/user/login', (req, res) => {
     /// ให้ ส่งข้อความอะไรสักอย่างหากเกิด status 40x
     let { username, password } = req.body
     if (!(username && password)) {
-        res.status(400).send("FUCKING ERROR : 400 Username and password mismatch!");
+        res.status(400).send("FUCKAAA ERROR : 400 Username and password mismatch!");
     } 
     client.query( 'SELECT username FROM account WHERE username=$1' /* *ใส่ query string ที่แสดงค่า user ที่มี username=$1จาก table account */, [username], (err, data) => {
         if (err) {
