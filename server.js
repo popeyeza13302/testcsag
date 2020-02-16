@@ -31,7 +31,7 @@ app.post('/api/user/login', (req, res) => {
     } 
     client.query( 'SELECT username FROM account WHERE username=$1' /* *ใส่ query string ที่แสดงค่า user ที่มี username=$1จาก table account */, [username], (err, data) => {
         if (err) {
-            res.status(401).send("MOTHERFUCKER ERROR : 401 WHAT THE HELL IS HAPPENING??");
+            res.status(401).send("FUCKER ERROR : 401 WHAT THE HELL IS HAPPENING??");
         }
         else if (data.rows[0] == undefined) {
             res.status(401).send("FUCKING ERROR : 401 data rows is undefined.");
